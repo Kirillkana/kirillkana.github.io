@@ -162,6 +162,38 @@ $(function() {
         $(".burger-span-3").toggleClass('span-move-3');
     });
 
+
+
+
+
+
+
+        (function($){
+            $(window).on('load', function(){
+                $.instagramFeed({
+                    'username': 'lil__kina',
+                    'get_data': true,
+                    'callback': function(data){
+                       // $('.owl-instagram').html(JSON.stringify(data, null, 2));
+                        json_string = JSON.stringify(data, null,2);
+                        object_json = jQuery.parseJSON(json_string);
+                        needPart = object_json.edge_owner_to_timeline_media.edges;
+                        var arr_links = [];
+                        for (var key in needPart) {
+                            arr_links.push(needPart[key].node.thumbnail_src);
+                        }
+                        $.each(arr_links, function(i){
+                            img_link = String(arr_links[i]);
+                            $('.owl-instagram').trigger('add.owl.carousel', ['<div class="item"><img src="' + img_link  +'" alt=""></div>'])
+                                .trigger('refresh.owl.carousel');
+                        });
+                    }
+                });
+            });
+        })(jQuery);
+
+
+
     var owl_reviews = $('.owl-carousel-reviews');
     var play_video = false;
 
