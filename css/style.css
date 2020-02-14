@@ -29,6 +29,11 @@ a:hover{
     text-decoration: none;
 }
 
+
+.sex-img-man{
+    top:0;
+}
+
 .default-text-procedure{
     font-family: Lato, serif;
     font-style: normal;
