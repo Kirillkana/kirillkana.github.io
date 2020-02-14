@@ -53,7 +53,7 @@
                         <div class="text-info-slider">
                             <span class="title-slider">Сделай эпиляцию<br>всего тела за 9 900 тг</span>
                             <p class="text-slider">и получи RF лифтинг лица <br class="br-text-slider"> в подарок!</p>
-                            <div class="button-sign-up">
+                            <div class="button-sign-up button-sign-up-slider">
                                 Записаться
                             </div>
                         </div>
@@ -326,6 +326,48 @@
             </div>
         </div>
     </footer>
+    <div class="overflow-request">
+        <form class="record-request" action="" id="ajax_form">
+            <img src="images/cross-procedure.svg" class="cross-procedure" alt="">
+            <span class="sign-procedure-title">Записаться на процедуру</span>
+            <input class="input-field input-field-1" type="text" name="name" placeholder = "Ваше имя*" required >
+            <input class="input-field input-field-2" type="tel" name="phone" placeholder = "Телефон*" required >
+
+            <div class="new-select-style">
+                <select onfocus="this.size=4;"  onblur="this.size=1"  name="procedure" required class="select-procedure">
+                    <option value disabled selected hidden>Выбрать процедуру</option>
+                    <option>Процедура</option>
+                    <option>Процедура 1</option>
+                    <option>Процедура 2</option>
+                    <option>Процедура3</option>
+                    <option>Процедура 4</option>
+                    <option>Процедура 5</option>
+                    <option>Процедура 6</option>
+                    <option>Процедура 7</option>
+                </select>
+                <div class="new-arrow-zone">
+                    <img class="delete-procedure" src="images/cross-procedure.svg" alt="">
+                    <img class="change-procedure" src="images/arrow-select-procedure.svg" alt="">
+                </div>
+
+                <div class="default-text-procedure">
+                    Выбрать процедуру
+                </div>
+            </div>
+            <input class="submit-procedure-info" type="submit" value="Отправить">
+            <span class="close-procedure-mobile">Закрыть</span>
+        </form>
+        <div class="notification-success">
+            <img src="images/cross-procedure.svg" class="cross-procedure" alt="">
+            <span class="sign-procedure-title">Ваше заявка отправлена!</span>
+            <p class="wee-call-back">
+                Мы вам перезвоним в течении 15 минут<br>
+                чтобы подтвердить вашу запись
+            </p>
+            <p class="if-all-good">*если заявка оставлена в рабочее время</p>
+            <div class="close-success-div">Закрыть</div>
+        </div>
+    </div>
     <div class="overlay-mobile-menu">
         <nav class="mobile-nav">
             <ul>

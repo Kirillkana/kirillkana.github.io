@@ -64,20 +64,34 @@ $(function() {
         $(".default-text-procedure").css('display','none');
     });
 
-    $(".sub-card-procedure").click(function () {
+
+
+    $(".sub-card-procedure, .button-sign-up-slider").click(function () {
         if ($(window).width() > '768'){
-            var need_procedure =  $(this).next().text();
-            need_procedure = $.trim(need_procedure);
+            check_class = $(this).attr('class');
+
+            if (check_class == 'sub-card-procedure'){
+                var need_procedure =  $(this).next().text();
+                need_procedure = $.trim(need_procedure);
+                $('.select-procedure').val(need_procedure);
+                $(".default-text-procedure").css('display','none');
+            }
+
+            else{
+                $(".default-text-procedure").css('display','flex');
+                $('.select-procedure').val("0");
+            }
+
             $(".change-procedure").css('display', 'none');
             $(".new-arrow-zone").css('pointer-events','inherit');
             $(".delete-procedure").css('display', 'block');
-            $('.select-procedure').val(need_procedure);
             $(".overflow-request").css("display", "flex")
                 .hide()
                 .fadeIn(300);
-            $(".default-text-procedure").css('display','none');
+
         }
     });
+
 
 
     $( document ).ready(function() {
@@ -163,11 +177,6 @@ $(function() {
     });
 
 
-
-
-
-
-
         (function($){
             $(window).on('load', function(){
                 $.instagramFeed({
@@ -177,7 +186,9 @@ $(function() {
                        // $('.owl-instagram').html(JSON.stringify(data, null, 2));
                         json_string = JSON.stringify(data, null,2);
                         object_json = jQuery.parseJSON(json_string);
+                        //console.log(object_json);
                         needPart = object_json.edge_owner_to_timeline_media.edges;
+                        //console.log(needPart);
                         var arr_links = [];
                         for (var key in needPart) {
                             arr_links.push(needPart[key].node.thumbnail_src);
