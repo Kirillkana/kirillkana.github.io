@@ -1866,9 +1866,9 @@ select, input{
 
     .new-arrow-zone{
         width: 30px;
-        padding-right: 10px;
-        top: 3px;
-        bottom: 3px;
+        border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        -webkit-border-radius: 0 3px 3px 0;
     }
 
     .wee-call-back{
