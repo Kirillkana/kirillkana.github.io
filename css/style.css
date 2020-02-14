@@ -1877,5 +1877,9 @@ section.sex-sub-categories{
     .owl-carousel .owl-item img.background-slider{
         display: none;
     }
+
+    .myth-video{
+        height: 179px;
+    }
 }
 
