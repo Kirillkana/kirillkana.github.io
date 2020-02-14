@@ -1172,11 +1172,12 @@ select, input{
 }
 
 .select-procedure option:hover {
-    box-shadow: 0 0 10px 100px #5ac7ef inset;
+    box-shadow: 0 0 10px 100px #3CD19A inset;
+    color: #ffffff;
 }
 
 .select-procedure option:checked {
-    background: #ababab linear-gradient(#ababab, #ababab);
+    background: #000000 linear-gradient(#000000, #000000);
 }
 
 .new-select-style{
