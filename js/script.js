@@ -51,7 +51,7 @@ $(function() {
         e.stopPropagation();
     });
 
-    $(".mobile-card-sign-up").click(function () {
+    $(".mobile-card-sign-up, .sign-up-mobile").click(function () {
         var need_procedure =  $(this).prev().prev().text();
         need_procedure = $.trim(need_procedure);
         $(".change-procedure").css('display', 'none');
@@ -67,29 +67,29 @@ $(function() {
 
 
     $(".sub-card-procedure, .button-sign-up-slider").click(function () {
-        if ($(window).width() > '768'){
             check_class = $(this).attr('class');
-
             if (check_class == 'sub-card-procedure'){
-                var need_procedure =  $(this).next().text();
-                need_procedure = $.trim(need_procedure);
-                $('.select-procedure').val(need_procedure);
-                $(".default-text-procedure").css('display','none');
+                if ($(window).width() > '768') {
+                    var need_procedure = $(this).next().text();
+                    need_procedure = $.trim(need_procedure);
+                    $('.select-procedure').val(need_procedure);
+                    $(".default-text-procedure").css('display', 'none');
+                    $(".change-procedure").css('display', 'none');
+                    $(".delete-procedure").css('display', 'block');
+                }
             }
 
             else{
                 $(".default-text-procedure").css('display','flex');
                 $('.select-procedure').val("0");
+                $(".change-procedure").css('display', 'block');
+                $(".delete-procedure").css('display', 'none');
             }
 
-            $(".change-procedure").css('display', 'none');
             $(".new-arrow-zone").css('pointer-events','inherit');
-            $(".delete-procedure").css('display', 'block');
             $(".overflow-request").css("display", "flex")
                 .hide()
                 .fadeIn(300);
-
-        }
     });
 
 

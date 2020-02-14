@@ -1866,6 +1866,9 @@ select, input{
 
     .new-arrow-zone{
         width: 30px;
+        padding-right: 10px;
+        top: 3px;
+        bottom: 3px;
     }
 
     .wee-call-back{

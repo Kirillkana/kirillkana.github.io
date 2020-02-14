@@ -334,7 +334,7 @@
             <input class="input-field input-field-2" type="tel" name="phone" placeholder = "Телефон*" required >
 
             <div class="new-select-style">
-                <select onfocus="this.size=4;"  onblur="this.size=1"  name="procedure" required class="select-procedure">
+                <select onfocus="this.size=4;"  onblur="this.size=1" onchange='this.blur();'  name="procedure" required class="select-procedure">
                     <option value disabled selected hidden>Выбрать процедуру</option>
                     <option>Процедура</option>
                     <option>Процедура 1</option>
@@ -371,9 +371,9 @@
     <div class="overlay-mobile-menu">
         <nav class="mobile-nav">
             <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Для мужчин</a></li>
-                <li><a href="#">Для женщин</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="men.html">Для мужчин</a></li>
+                <li><a href="women.html">Для женщин</a></li>
                 <li><a href=#>Контакты</a></li>
             </ul>
         </nav>
