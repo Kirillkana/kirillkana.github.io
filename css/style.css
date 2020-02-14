@@ -1869,6 +1869,8 @@ select, input{
         border-radius: 0 3px 3px 0;
         -moz-border-radius: 0 3px 3px 0;
         -webkit-border-radius: 0 3px 3px 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .wee-call-back{
